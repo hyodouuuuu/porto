@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>project rumah rawat luka ubalan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap");
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+    </style>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body class="bg-[#0a0a0a] text-zinc-100 antialiased selection:bg-zinc-800">
+    <!-- Navigasi Minimalis -->
+    <nav class="relative max-w-7xl mx-auto px-6 py-4 flex items-center">
+      <div
+        class="absolute left-1/2 -translate-x-1/2 hidden md:flex bg-zinc-900/90 border border-zinc-800 rounded-full px-6 py-2 items-center space-x-6 text-sm text-gray-300"
+      >
+        <a href="index.html#home" class="hover:text-white transition">Home</a>
+        <a href="index.html#about" class="hover:text-white transition">About</a>
+        <a href="index.html#services" class="hover:text-white transition"
+          >Services</a
+        >
+        <a href="index.html#skills" class="hover:text-white transition"
+          >Skills</a
+        >
+        <a href="index.html#projects" class="hover:text-white transition"
+          >Projects</a
+        >
+      </div>
+
+      <a
+        href="https://wa.me/6287834475079"
+        target="_blank"
+        class="ml-auto bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 text-sm px-5 py-2.5 rounded-lg transition"
+      >
+        Contact Me
+      </a>
+    </nav>
+
+    <!-- IMMERSIVE HERO: Gambar di Belakang, Teks di Depan Kiri Pudar ke Bawah -->
+    <section
+      class="relative w-full h-[85vh] md:h-[90vh] flex items-end overflow-hidden"
+    >
+      <!-- Background Image Layer -->
+      <div class="absolute inset-0 z-0">
+        <img
+          src="images/klinik_ubalan.webp"
+          alt="Rumah Rawat Luka Ubalan"
+          class="w-full h-full object-cover object-center"
+          onerror="
+            this.src =
+              'https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1200&auto=format&fit=crop'
+          "
+        />
+        <!-- Super Smooth Gradient Overlay: Gelap di kiri dan pudar pekat ke bawah -->
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/60 to-transparent"
+        ></div>
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-[#0a0a0a]/40 to-transparent hidden md:block"
+        ></div>
+      </div>
+
+      <!-- Content di Depan Kiri -->
+      <div
+        class="relative z-10 max-w-6xl mx-auto w-full px-6 pb-16 md:pb-24 text-left"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
+        <div class="max-w-2xl space-y-4">
+          <span
+            class="text-xs font-bold text-zinc-400 uppercase tracking-widest"
+          >
+            Web Application
+          </span>
+          <h1
+            class="text-4xl md:text-6xl font-extrabold tracking-tight text-white leading-none"
+          >
+            Rumah Rawat Luka Ubalan
+          </h1>
+          <p
+            class="text-base md:text-xl text-zinc-400 font-light leading-relaxed pt-2"
+          >
+            Platform kesehatan digital yang dirancang untuk merombak total cara
+            klinik berinteraksi dengan pasien dan mengelola rekam medis.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- INFO RINGKAS (HORIZONAL LINE) -->
+    <section
+      class="max-w-6xl mx-auto px-6 py-12 border-b border-zinc-900/60 grid grid-cols-2 md:grid-cols-3 gap-8 text-left"
+    >
+      <div>
+        <span
+          class="text-[10px] font-bold text-zinc-600 uppercase tracking-wider block mb-1"
+          >Role</span
+        >
+        <p class="text-sm text-zinc-300">
+          UI/UX Design & Full-Stack Development
+        </p>
+      </div>
+      <div>
+        <span
+          class="text-[10px] font-bold text-zinc-600 uppercase tracking-wider block mb-1"
+          >Tech Stack</span
+        >
+        <p class="text-sm text-zinc-300">Laravel, Tailwind CSS, Vite</p>
+      </div>
+      <div class="col-span-2 md:col-span-1">
+        <span
+          class="text-[10px] font-bold text-zinc-600 uppercase tracking-wider block mb-1"
+          >Core Deliverables</span
+        >
+        <p class="text-sm text-zinc-300">
+          Landing Page, Maps Integration, Secure Auth
+        </p>
+      </div>
+    </section>
+
+    <!-- CASE STUDY CONTENT: Mengalir Tanpa Box Kotak -->
+    <section class="max-w-3xl mx-auto px-6 py-24 space-y-20 text-left">
+      <!-- Bagian 1: Masalah -->
+      <div class="space-y-4" data-aos="fade-up">
+        <div
+          class="text-xs font-bold text-zinc-500 uppercase tracking-widest flex items-center gap-2"
+        >
+          <span class="w-1 h-1 bg-zinc-500 rounded-full"></span> The Problem
+        </div>
+        <h2 class="text-2xl md:text-3xl font-bold text-white tracking-tight">
+          Akses informasi yang minim & registrasi yang melelahkan.
+        </h2>
+        <p class="text-zinc-400 leading-relaxed text-sm md:text-base">
+          Sebelumnya, calon pasien sering kali kesulitan mencari lokasi presisi
+          klinik karena tidak adanya representasi digital yang jelas. Proses
+          pendaftaran yang masih manual juga memicu antrean panjang di lokasi,
+          ditambah sistem pencatatan internal yang belum terpusat dan berisiko
+          dari segi keamanan data.
+        </p>
+      </div>
+
+      <!-- Bagian 2: Solusi -->
+      <div class="space-y-4" data-aos="fade-up">
+        <div
+          class="text-xs font-bold text-zinc-500 uppercase tracking-widest flex items-center gap-2"
+        >
+          <span class="w-1 h-1 bg-zinc-500 rounded-full"></span> The Solution
+        </div>
+        <h2 class="text-2xl md:text-3xl font-bold text-white tracking-tight">
+          Menghadirkan ekosistem digital yang ringkas dan aman.
+        </h2>
+        <p class="text-zinc-400 leading-relaxed text-sm md:text-base mb-6">
+          Saya merancang ulang seluruh pengalaman tersebut ke dalam sebuah web
+          apps. Fokus utamanya adalah memangkas birokrasi pendaftaran dan
+          mempermudah akses pasien lewat tiga fitur utama:
+        </p>
+
+        <!-- List Detail Minimalis -->
+        <div class="space-y-6 pt-2">
+          <div class="border-l-2 border-zinc-800 pl-4 space-y-1">
+            <h4 class="text-sm font-bold text-zinc-200">
+              Interactive Landing Page
+            </h4>
+            <p class="text-xs text-zinc-500 leading-relaxed">
+              Menampilkan profil klinik, jam operasional, dan jenis perawatan
+              luka secara transparan.
+            </p>
+          </div>
+          <div class="border-l-2 border-zinc-800 pl-4 space-y-1">
+            <h4 class="text-sm font-bold text-zinc-200">
+              Gmaps API Integration
+            </h4>
+            <p class="text-xs text-zinc-500 leading-relaxed">
+              Memetakan lokasi klinik secara akurat demi memudahkan navigasi
+              pasien dari rumah.
+            </p>
+          </div>
+          <div class="border-l-2 border-zinc-800 pl-4 space-y-1">
+            <h4 class="text-sm font-bold text-zinc-200">
+              Secure Patient Gateway
+            </h4>
+            <p class="text-xs text-zinc-500 leading-relaxed">
+              Sistem login terenkripsi menggunakan Laravel Auth untuk melindungi
+              rekam medis pasien.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bagian 3: Tools/Teknologi -->
+      <div class="space-y-6 pt-6" data-aos="fade-up">
+        <div
+          class="text-xs font-bold text-zinc-500 uppercase tracking-widest flex items-center gap-2"
+        >
+          <span class="w-1 h-1 bg-zinc-500 rounded-full"></span> Tools &
+          Technologies
+        </div>
+
+        <div class="flex flex-wrap gap-3">
+          <div
+            class="bg-zinc-900/40 border border-zinc-800/60 px-4 py-2.5 rounded-xl"
+          >
+            <span class="text-xs font-bold text-zinc-200 block">Laravel</span>
+            <span class="text-[10px] text-zinc-500"
+              >Backend Architecture & Auth</span
+            >
+          </div>
+          <div
+            class="bg-zinc-900/40 border border-zinc-800/60 px-4 py-2.5 rounded-xl"
+          >
+            <span class="text-xs font-bold text-zinc-200 block"
+              >Tailwind CSS</span
+            >
+            <span class="text-[10px] text-zinc-500"
+              >Responsive Utility Interface</span
+            >
+          </div>
+          <div
+            class="bg-zinc-900/40 border border-zinc-800/60 px-4 py-2.5 rounded-xl"
+          >
+            <span class="text-xs font-bold text-zinc-200 block">Vite</span>
+            <span class="text-[10px] text-zinc-500"
+              >Asset Bundler & Performance</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Tipis -->
+    <footer
+      class="py-12 border-t border-zinc-900/60 text-center text-[11px] font-medium tracking-wider text-zinc-600 uppercase"
+    >
+      &copy; 2026 Singgih — Portfolio Case Study
+    </footer>
+
+    <!-- Script AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+        duration: 800,
+      });
+    </script>
+  </body>
+</html>

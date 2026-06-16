@@ -10,6 +10,17 @@
       body {
         font-family: "Inter", sans-serif;
       }
+      /* Menghilangkan paksa semua jenis bullet/titik pagination bawaan swiper */
+      .swiper-pagination,
+      .swiper-pagination-bullet,
+      .swiper-pagination-bullet-active,
+      .swiper-notification {
+        display: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        width: 0 !important;
+        height: 0 !important;
+      }
     </style>
     <link
       rel="stylesheet"
@@ -22,21 +33,36 @@
   >
     <!-- Navbar -->
     <header
-      class="sticky top-0 z-[100] bg-black/80 backdrop-blur-md border-b border-zinc-900/50"
+      class="fixed top-0 inset-x-0 z-[100] bg-black/80 backdrop-blur-md border-b border-white/10"
     >
       <nav class="relative max-w-7xl mx-auto px-6 py-4 flex items-center">
-        <!-- Menu Navigasi Tengah -->
         <div
-          class="absolute left-1/2 -translate-x-1/2 hidden md:flex bg-zinc-900/90 border border-zinc-800 rounded-full px-6 py-2 items-center space-x-6 text-sm text-gray-300"
+          id="nav-menu"
+          class="absolute left-1/2 -translate-x-1/2 hidden md:flex bg-zinc-900/90 border border-zinc-800 rounded-full px-6 py-2.5 items-center space-x-6 text-sm text-gray-300 relative"
         >
-          <a href="#home" class="hover:text-white transition">Home</a>
-          <a href="#about" class="hover:text-white transition">About</a>
-          <a href="#services" class="hover:text-white transition">Services</a>
-          <a href="#skills" class="hover:text-white transition">Skills</a>
-          <a href="#projects" class="hover:text-white transition">Projects</a>
+          <a href="#home" class="nav-link hover:text-white transition py-1"
+            >Home</a
+          >
+          <a href="#about" class="nav-link hover:text-white transition py-1"
+            >About</a
+          >
+          <a href="#services" class="nav-link hover:text-white transition py-1"
+            >Services</a
+          >
+          <a href="#skills" class="nav-link hover:text-white transition py-1"
+            >Skills</a
+          >
+          <a href="#projects" class="nav-link hover:text-white transition py-1"
+            >Projects</a
+          >
+
+          <div
+            id="nav-indicator"
+            class="absolute bottom-1.5 h-[2px] bg-white rounded-full transition-all duration-300 ease-in-out pointer-events-none"
+            style="left: 0; width: 0"
+          ></div>
         </div>
 
-        <!-- Tombol Contact -->
         <a
           href="https://wa.me/6287834475079"
           target="_blank"
@@ -49,7 +75,7 @@
 
     <section
       id="home"
-      class="max-w-7xl mx-auto px-6 pt-2 pb-8 md:pt-4 md:pb-12 -mt-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
+      class="max-w-7xl mx-auto px-6 pt-12 pb-6 md:pt-16 md:pb-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
     >
       <div data-aos="fade-right" data-aos-duration="1000">
         <p class="text-gray-400 mb-2">Halo saya Singgih</p>
@@ -67,7 +93,8 @@
         </p>
 
         <a
-          href="#"
+          href="cv/cv_singgih_dama_riofausta.pdf"
+          download="CV_Singgih_Dama.pdf"
           class="inline-block bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 text-sm px-6 py-3 rounded-lg transition mb-8"
         >
           Download CV
@@ -87,13 +114,13 @@
           </a>
 
           <a
-            href="https://www.tiktok.com/@zuunn55"
+            href="https://www.linkedin.com/in/singgih-dama-7a02a2322/"
             target="_blank"
             class="text-gray-400 hover:text-white transition"
           >
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
               <path
-                d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.35h-3.13v13.3a2.83 2.83 0 1 1-2.83-2.83c.24 0 .48.03.7.09V9.72a5.96 5.96 0 1 0 5.96 5.96V9.12a8.03 8.03 0 0 0 4.09 1.12V6.69z"
+                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
               />
             </svg>
           </a>
@@ -484,80 +511,108 @@
       class="max-w-7xl mx-auto px-6 py-20 border-t border-zinc-900/80 relative"
     >
       <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold mb-3 tracking-tight" data-aos="fade-up">
+        <h2
+          class="text-3xl md:text-4xl font-bold mb-3 tracking-tight"
+          data-aos="fade-up"
+        >
           Featured Projects
         </h2>
-        <p class="text-sm text-zinc-400 max-w-xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="100">
-          Eksplorasi solusi digital inovatif yang memadukan estetika desain modern dengan fungsionalitas sistem.
+        <p
+          class="text-sm text-zinc-400 max-w-xl mx-auto leading-relaxed"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          Eksplorasi solusi digital inovatif yang memadukan estetika desain
+          modern dengan fungsionalitas sistem.
         </p>
       </div>
 
-      <!-- Container Grid Utama (1 Project Besar di Atas, 2 Kecil di Bawah) -->
       <div class="space-y-8">
-        
-        <!-- ================= 1. PROJECT UTAMA (DI ATAS) ================= -->
-        <div
+        <a
+          href="project_ubalan.html"
           data-aos="fade-up"
-          class="group relative w-full h-[400px] md:h-[480px] rounded-3xl overflow-hidden border border-zinc-800/60 hover:border-zinc-700/80 transition-all duration-500 shadow-2xl"
+          class="group relative block w-full h-[400px] md:h-[480px] rounded-3xl overflow-hidden border border-zinc-800/60 hover:border-zinc-700/80 transition-all duration-500 shadow-2xl cursor-pointer hover:scale-[1.01]"
         >
-          <!-- Background Gambar dengan Efek Pudar ke Bawah & Kanan -->
           <div class="absolute inset-0 z-0">
-            <img 
-              src="images/project-ubalan.png" 
-              alt="Rumah Rawat Luka Ubalan" 
+            <img
+              src="images/klinik_ubalan.webp"
+              alt="Rumah Rawat Luka Ubalan"
               class="w-full h-full object-cover object-center scale-100 group-hover:scale-102 transition-transform duration-700"
-              onerror="this.src='https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1200&auto=format&fit=crop';" 
+              
             />
-            <!-- Layer Gradasi Gelap (Pudar ke bawah dan ke kanan untuk area teks) -->
-            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/20 md:bg-gradient-to-r md:from-black md:via-black/80 md:to-transparent"></div>
-            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent md:hidden"></div>
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/20 md:bg-gradient-to-r md:from-black md:via-black/80 md:to-transparent"
+            ></div>
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent md:hidden"
+            ></div>
           </div>
 
-          <!-- Konten Teks di Sebelah Depan Kiri -->
-          <div class="absolute inset-0 z-10 flex flex-col justify-end p-6 md:p-12 md:max-w-xl text-left">
+          <div
+            class="absolute inset-0 z-10 flex flex-col justify-end p-6 md:p-12 md:max-w-xl text-left"
+          >
             <div class="mb-4">
-              <span class="text-[10px] font-bold text-zinc-400 uppercase tracking-widest bg-zinc-900/90 border border-zinc-800 px-3 py-1.5 rounded-full backdrop-blur-md">
+              <span
+                class="text-[10px] font-bold text-zinc-400 uppercase tracking-widest bg-zinc-900/90 border border-zinc-800 px-3 py-1.5 rounded-full backdrop-blur-md"
+              >
                 Web Development & Design
               </span>
             </div>
-            <h3 class="text-2xl md:text-4xl font-extrabold tracking-tight text-white mb-4">
+            <h3
+              class="text-2xl md:text-4xl font-extrabold tracking-tight text-white mb-4"
+            >
               Rumah Rawat Luka Ubalan
             </h3>
-            <p class="text-sm md:text-base text-zinc-300 leading-relaxed mb-6 opacity-90">
-              Pengembangan aplikasi web klinik perawatan luka modern. Dilengkapi dengan landing page interaktif yang responsif, integrasi peta lokasi pasien, dan sistem manajemen login yang aman.
+            <p
+              class="text-sm md:text-base text-zinc-300 leading-relaxed mb-6 opacity-90"
+            >
+              Pengembangan aplikasi web klinik perawatan luka modern. Dilengkapi
+              dengan landing page interaktif yang responsif, integrasi peta
+              lokasi pasien, dan sistem manajemen login yang aman.
             </p>
             <div class="flex flex-wrap gap-2">
-              <span class="bg-zinc-950/80 border border-zinc-800/80 px-3 py-1 rounded-lg text-xs text-zinc-300 font-medium backdrop-blur-sm">Laravel</span>
-              <span class="bg-zinc-950/80 border border-zinc-800/80 px-3 py-1 rounded-lg text-xs text-zinc-300 font-medium backdrop-blur-sm">Tailwind CSS</span>
-              <span class="bg-zinc-950/80 border border-zinc-800/80 px-3 py-1 rounded-lg text-xs text-zinc-300 font-medium backdrop-blur-sm">Vite</span>
+              <span
+                class="bg-zinc-950/80 border border-zinc-800/80 px-3 py-1 rounded-lg text-xs text-zinc-300 font-medium backdrop-blur-sm"
+                >Laravel</span
+              >
+              <span
+                class="bg-zinc-950/80 border border-zinc-800/80 px-3 py-1 rounded-lg text-xs text-zinc-300 font-medium backdrop-blur-sm"
+                >Tailwind CSS</span
+              >
+              <span
+                class="bg-zinc-950/80 border border-zinc-800/80 px-3 py-1 rounded-lg text-xs text-zinc-300 font-medium backdrop-blur-sm"
+                >Vite</span
+              >
             </div>
           </div>
-        </div>
+        </a>
 
-        <!-- ================= 2 DI BAWAH (GRID 2 KOLOM) ================= -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          
-          <!-- Project 2: CalmWave -->
-          <div
+          <a
+            href="project_calmwave.html"
             data-aos="fade-up"
             data-aos-delay="100"
-            class="group relative h-[350px] rounded-3xl overflow-hidden border border-zinc-800/60 hover:border-zinc-700/80 transition-all duration-500 shadow-xl"
+            class="group relative block h-[350px] rounded-3xl overflow-hidden border border-zinc-800/60 hover:border-zinc-700/80 transition-all duration-500 shadow-xl cursor-pointer hover:scale-[1.01]"
           >
-            <!-- Background Gambar -->
             <div class="absolute inset-0 z-0">
-              <img 
-                src="images/project-calmwave.png" 
-                alt="CalmWave" 
+              <img
+                src="images/calmwave.webp"
+                alt="CalmWave"
                 class="w-full h-full object-cover scale-100 group-hover:scale-102 transition-transform duration-700"
-                onerror="this.src='https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?q=80&w=800&auto=format&fit=crop';"
+                
               />
-              <div class="absolute inset-0 bg-gradient-to-t from-black via-black/85 to-black/20"></div>
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black via-black/85 to-black/20"
+              ></div>
             </div>
 
-            <!-- Konten Teks -->
-            <div class="absolute inset-0 z-10 flex flex-col justify-end p-6 md:p-8 text-left">
+            <div
+              class="absolute inset-0 z-10 flex flex-col justify-end p-6 md:p-8 text-left"
+            >
               <div class="mb-3">
-                <span class="text-[10px] font-bold text-zinc-400 uppercase tracking-widest bg-zinc-900/90 border border-zinc-800 px-2.5 py-1 rounded-full backdrop-blur-md">
+                <span
+                  class="text-[10px] font-bold text-zinc-400 uppercase tracking-widest bg-zinc-900/90 border border-zinc-800 px-2.5 py-1 rounded-full backdrop-blur-md"
+                >
                   Mobile Application
                 </span>
               </div>
@@ -565,36 +620,49 @@
                 CalmWave
               </h3>
               <p class="text-xs md:text-sm text-zinc-400 leading-relaxed mb-5">
-                Aplikasi relaksasi audio pintar yang mengizinkan pengguna mencampur berbagai instrumen suara alam demi menciptakan suasana kerja dan tidur yang kondusif.
+                Aplikasi relaksasi audio pintar yang mengizinkan pengguna
+                mencampur berbagai instrumen suara alam demi menciptakan suasana
+                kerja dan tidur yang kondusif.
               </p>
               <div class="flex flex-wrap gap-2">
-                <span class="bg-zinc-950/80 border border-zinc-800/80 px-2.5 py-1 rounded-md text-xs text-zinc-400 backdrop-blur-sm">Flutter</span>
-                <span class="bg-zinc-950/80 border border-zinc-800/80 px-2.5 py-1 rounded-md text-xs text-zinc-400 backdrop-blur-sm">Audio Engine</span>
+                <span
+                  class="bg-zinc-950/80 border border-zinc-800/80 px-2.5 py-1 rounded-md text-xs text-zinc-400 backdrop-blur-sm"
+                  >Flutter</span
+                >
+                <span
+                  class="bg-zinc-950/80 border border-zinc-800/80 px-2.5 py-1 rounded-md text-xs text-zinc-400 backdrop-blur-sm"
+                  >Audio Engine</span
+                >
               </div>
             </div>
-          </div>
+          </a>
 
-          <!-- Project 3: Smart Chicken Farm -->
-          <div
+          <a
+            href="project_smart_coop.html"
             data-aos="fade-up"
             data-aos-delay="200"
-            class="group relative h-[350px] rounded-3xl overflow-hidden border border-zinc-800/60 hover:border-zinc-700/80 transition-all duration-500 shadow-xl"
+            class="group relative block h-[350px] rounded-3xl overflow-hidden border border-zinc-800/60 hover:border-zinc-700/80 transition-all duration-500 shadow-xl cursor-pointer hover:scale-[1.01]"
           >
-            <!-- Background Gambar -->
             <div class="absolute inset-0 z-0">
-              <img 
-                src="images/project-farm.png" 
-                alt="Smart Chicken Farm" 
+              <img
+                src="images/smart_coop.webp"
+                alt="Smart Chicken Farm"
                 class="w-full h-full object-cover scale-100 group-hover:scale-102 transition-transform duration-700"
-                onerror="this.src='https://images.unsplash.com/photo-1516467508483-a7212febe31a?q=80&w=800&auto=format&fit=crop';"
+               
+                  
               />
-              <div class="absolute inset-0 bg-gradient-to-t from-black via-black/85 to-black/20"></div>
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black via-black/85 to-black/20"
+              ></div>
             </div>
 
-            <!-- Konten Teks -->
-            <div class="absolute inset-0 z-10 flex flex-col justify-end p-6 md:p-8 text-left">
+            <div
+              class="absolute inset-0 z-10 flex flex-col justify-end p-6 md:p-8 text-left"
+            >
               <div class="mb-3">
-                <span class="text-[10px] font-bold text-zinc-400 uppercase tracking-widest bg-zinc-900/90 border border-zinc-800 px-2.5 py-1 rounded-full backdrop-blur-md">
+                <span
+                  class="text-[10px] font-bold text-zinc-400 uppercase tracking-widest bg-zinc-900/90 border border-zinc-800 px-2.5 py-1 rounded-full backdrop-blur-md"
+                >
                   IoT & Dashboard
                 </span>
               </div>
@@ -602,15 +670,22 @@
                 Smart Chicken Farm
               </h3>
               <p class="text-xs md:text-sm text-zinc-400 leading-relaxed mb-5">
-                Sistem otomatisasi peternakan menggunakan ESP32 untuk monitoring suhu sekunder, tingkat kelembapan, dan kalkulasi total populasi ternak secara *real-time*.
+                Sistem otomatisasi peternakan menggunakan ESP32 untuk monitoring
+                suhu sekunder, tingkat kelembapan, dan kalkulasi total populasi
+                ternak secara *real-time*.
               </p>
               <div class="flex flex-wrap gap-2">
-                <span class="bg-zinc-950/80 border border-zinc-800/80 px-2.5 py-1 rounded-md text-xs text-zinc-400 backdrop-blur-sm">ESP32</span>
-                <span class="bg-zinc-950/80 border border-zinc-800/80 px-2.5 py-1 rounded-md text-xs text-zinc-400 backdrop-blur-sm">Web Dashboard</span>
+                <span
+                  class="bg-zinc-950/80 border border-zinc-800/80 px-2.5 py-1 rounded-md text-xs text-zinc-400 backdrop-blur-sm"
+                  >ESP32</span
+                >
+                <span
+                  class="bg-zinc-950/80 border border-zinc-800/80 px-2.5 py-1 rounded-md text-xs text-zinc-400 backdrop-blur-sm"
+                  >Web Dashboard</span
+                >
               </div>
             </div>
-          </div>
-
+          </a>
         </div>
       </div>
     </section>
@@ -753,6 +828,97 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      // Inisialisasi AOS & Swiper bawaan template kamu
+      AOS.init();
+      new Swiper(".skillsSwiper", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        pagination: { el: ".swiper-pagination", clickable: true },
+        breakpoints: {
+          640: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        },
+      });
+
+      // ================= FIX LINE NAVIGASI AMBLES/TIDAK PAS =================
+      document.addEventListener("DOMContentLoaded", () => {
+        const links = document.querySelectorAll(".nav-link");
+        const indicator = document.getElementById("nav-indicator");
+        const menuContainer = document.getElementById("nav-menu");
+        const sections = document.querySelectorAll("section[id]");
+
+        function moveIndicator(activeLink) {
+          if (!activeLink || !indicator || !menuContainer) return;
+
+          // Ambil nilai padding asli bagian kiri container (px-6 = 24px)
+          const containerStyle = window.getComputedStyle(menuContainer);
+          const paddingLeft = parseFloat(containerStyle.paddingLeft) || 0;
+
+          // Ambil posisi asli elemen link
+          const linkLeft = activeLink.offsetLeft;
+          const linkWidth = activeLink.offsetWidth;
+
+          // Koreksi posisi: offsetLeft dikurangi padding kiri container agar presisi di bawah teks
+          indicator.style.left = `${linkLeft - paddingLeft}px`;
+          indicator.style.width = `${linkWidth}px`;
+        }
+
+        // 1. Klik Event
+        links.forEach((link) => {
+          link.addEventListener("click", (e) => {
+            links.forEach((l) => l.classList.remove("text-white"));
+            link.classList.add("text-white");
+            moveIndicator(link);
+          });
+        });
+
+        // 2. Auto-Scroll Event (Intersection Observer)
+        const observerOptions = {
+          root: null,
+          rootMargin: "-30% 0px -60% 0px", // Dioptimalkan agar pas saat section di tengah layar
+          threshold: 0,
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const id = entry.target.getAttribute("id");
+              const activeLink = document.querySelector(
+                `.nav-link[href="#${id}"]`,
+              );
+
+              if (activeLink) {
+                links.forEach((l) => l.classList.remove("text-white"));
+                activeLink.classList.add("text-white");
+                moveIndicator(activeLink);
+              }
+            }
+          });
+        }, observerOptions);
+
+        sections.forEach((section) => observer.observe(section));
+
+        // Pemicu pertama kali halaman dimuat (mencari link yang aktif atau default ke Home)
+        setTimeout(() => {
+          const currentHash = window.location.hash || "#home";
+          const activeLink =
+            document.querySelector(`.nav-link[href="${currentHash}"]`) ||
+            links[0];
+          if (activeLink) {
+            activeLink.classList.add("text-white");
+            moveIndicator(activeLink);
+          }
+        }, 100);
+
+        // Resize Window Browser Safety
+        window.addEventListener("resize", () => {
+          const activeLink = document.querySelector(".nav-link.text-white");
+          if (activeLink) moveIndicator(activeLink);
+        });
+      });
+    </script>
 
     <script>
       // Inisialisasi Slider (Swiper)
